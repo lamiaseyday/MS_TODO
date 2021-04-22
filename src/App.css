@@ -2,246 +2,193 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  background-color: #F4F4F4;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+.app{
+  display: flex;
 }
 
-
-h1 {
-  margin: 32px 0;
-  color: black;
-  font-size: 24px;
+.content {
+  width: 85em;
+  margin-left: 2em;
+  padding:10px;
 }
 
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
+.menu-content{
+  width: 5.5em;
+  height: 650px;
+  background-color: #E4E4E4;
+  margin:50px 10px 50px;
+  border-radius: 40px;
+  box-shadow: 6px 6px 5px #B3B3B3;
+  justify-content: center;
 }
 
-.todo-form {
-  overflow: hidden;
+.iconStyle{
+  color: #0F053C; 
+  font-size: 3em;
+}
+.btn-content-todo{
+  height: 55px;
+  margin-top: 30px;
 }
 
-
-.todo-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border: 2px solid #FE6B8B;
-  outline: none;
-  width: 93%;
-  background: transparent;
-  color: black;
+.btn-content-todo:hover{
+  background-color: #ADA5CF;
 }
-
-.todo-input::placeholder {
-  color: black;
-}
-
-.todo-button {
-  padding: 16px;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  outline: none;
-  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
-  color: black;
-  text-transform: capitalize;
-}
-
-.todo-input.edit {
-  border: 2px solid #FE6B8B;
-  padding-bottom: 50px;
+.btn-content-fav{
+  height: 55px;
   
 }
 
-.todo-button.edit {
-  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
-  margin-top: 20px;
+.btn-content-fav:hover{
+  background-color: #ADA5CF;
+}
+.btn-content-date{
+  height: 55px;
 }
 
+.btn-content-date:hover{
+  background-color: #ADA5CF;
+}
+.btn-content-person{
+  height: 55px;
+}
 
+.btn-content-person:hover{
+  background-color: #ADA5CF;
+}
+.btn-content-home{
+  height: 55px;
+}
 
-.todo-row {
-  display: flex;
+.btn-content-home:hover{
+  background-color: #ADA5CF;
 
-  align-items: flex-start;
-  margin: 4px auto;
-  color: #504949;
-  background: transparent;
-  border-bottom: 1px solid #C7C7C7;
-  padding: 15px;
-  width: 99%;
+}
+button:focus {
+  outline:0;
+}
+input:focus {
+  outline:0;
+}
+.btn-todo{
+  margin-top: 0.6em;
+  margin-left:1.7em;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.todo-row-item{
-  width: 103em;
-  margin-left: 2em;
+.btn-favorite{
+  margin-top: 0.6em;
+  margin-left:1.7em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
 }
+.btn-date{
+  margin-top: 0.6em;
+  margin-left:1.7em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
-
-
-.favorite-todo-row{
-  align-content: flex-end;
 }
+.btn-person{
+  margin-top: 0.6em;
+  margin-left:1.7em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
-
-
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
+}
+.btn-home{
+  margin-top: 0.6em;
+  margin-left:1.7em;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.delete-icon {
-  margin-right: 5px;
-  color: #fff;
-}
-
-.edit-icon {
-  color: #fff;
-}
-
-.addTodo {
-  position: absolute;
-  width: 99%;
-  bottom: 10px;
-  color:black;
-  background-color: white;
-  margin-top: 15px;
-}
-
-.todos {
-  margin:50px;
-  padding: 20px;
-  align-items: center;
-
-}
-
-.todoList {
-  margin-top: 60px;
-  min-height: 65vh;
-  overflow-y: auto;
-}
-
-/******************************************* */
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-
-.dayTask {
+.search{
+  padding:0.5em;
   width: 100%;
-  height: 85vh;
-  position: fixed;
-  margin-left: 92px;
+  margin-bottom: 10px;  
 }
 
-
-
-.dayTaskContent {
-  width: 103em;
-  height: 77vh;
-  margin-top: 0;
-  overflow-y: auto;
-  padding-left: 0;
-}
-.todos-content{
-  display: flex;
-  height: 3em;
-}
-.todo-title{
-  font-size: 20px;
-  padding-right: 10px;
-  color: #0F053C;
-}
-.myday {
-  position: fixed;
-  height: 5em;
-  width: 98em;
-  background-color: #FAFAFA;
-  z-index: 99;
-}
-.myday-content{
-  display: flex;
-}
-.dayTaskTitlediv {
-  width: 6em;
-}
-.dayTaskTitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  color: #34373d;
-  margin-top: 0;
-}
-.dayTaskIcon {
-  margin-top: 4px;
-  color: #707070;
-  cursor: pointer;
-}
-
-.mydayDate {
-  margin-bottom: 10px;
-  color: #34373d;
-}
-
-.daytasks {
-  border: 2px solid yellow;
-  width: 100em;
-  min-height: 79px;
-  height: auto;
-
-}
-.formContorl {
-  width: 99em;
-}
-
-.submitData{
-  display: flex;
+.search-icon{
   position: absolute;
-  width: 98em;
+  margin-left: 50em;
+  margin-top:0.5em;
 }
-
-.inputNot{
-  width: 103em;
-  height: 3em;
-  color: black;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #0F053C;
-  margin-left: 5px;
-}
-
-.inputNotDiv{
-  margin-top: 20px;
-}
-
-input:focus{
-  outline: none;
-}
-
-.btn-submit{
-  width: 20px;
-  height: 20px;
-}
-.btnSubmitDiv{
-  width: 10em;
-  height: 3em;
-  margin-top: 27px;
-}
-.btn-submit{
-  width: 40px;
+.input-search{
+  margin-left:20em;
+  border:none;
+  width: 43em;
   height: 35px;
-  background-color: transparent;
+  border-radius: 15px;
+  padding: 15px
+}
+
+.notes{
+  margin-top:50px ;
+  width: 83em;
+}
+
+.add-note{
+  height:80px;
+  width: 83em;
+  background-color: white;
+  position: fixed;
+  bottom: 0px;
+}
+
+.search-icon{
+  position: absolute;
+  margin-right: 50px;
+  z-index: 10px;
+}
+.btn {
+  display: inline-block;
   border: none;
+  background: #0F053C;
+  color: #fff;
+  padding: 7px 20px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
 }
 
-.btn-submit:focus {
-  outline: none;
-}
-.submitIcon{
-  color:#0F053C;
+.btn:hover {
+  background: #666;
 }
 
+.input-add{
+  flex: 20;
+  padding: 5px;
+  border-radius: 20px 0 0 20px;
+  border:none;
+  background-color: #0F053C;
+  opacity: 0.5;
+}
+::placeholder{
+  color:grey;
+  opacity: 1;
+}
 
+/*TODO ITEM*/
+.btn-del{
+  border:none;
+  background-color: transparent;
+}
 
