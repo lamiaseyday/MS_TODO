@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color:black;
   line-height: 1.4;
   background-color: #F4F4F4;
 }
@@ -35,6 +38,7 @@ a {
 .iconStyle{
   color: #0F053C; 
   font-size: 3em;
+  margin-top: 5px;
 }
 .btn-content-todo{
   height: 55px;
@@ -82,7 +86,7 @@ input:focus {
 }
 .btn-todo{
   margin-top: 0.6em;
-  margin-left:1.7em;
+  margin-left:1.2em;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -90,7 +94,7 @@ input:focus {
 
 .btn-favorite{
   margin-top: 0.6em;
-  margin-left:1.7em;
+  margin-left:1.2em;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -98,7 +102,7 @@ input:focus {
 }
 .btn-date{
   margin-top: 0.6em;
-  margin-left:1.7em;
+  margin-left:1.2em;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -106,7 +110,7 @@ input:focus {
 }
 .btn-person{
   margin-top: 0.6em;
-  margin-left:1.7em;
+  margin-left:1.2em;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -114,7 +118,7 @@ input:focus {
 }
 .btn-home{
   margin-top: 0.6em;
-  margin-left:1.7em;
+  margin-left:1.2em;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -128,7 +132,7 @@ input:focus {
 
 .search-icon{
   position: absolute;
-  margin-left: 50em;
+  margin-left: 54em;
   margin-top:0.5em;
 }
 .input-search{
@@ -169,17 +173,15 @@ input:focus {
   border-radius: 0 20px 20px 0;
 }
 
-.btn:hover {
-  background: #666;
-}
 
 .input-add{
   flex: 20;
   padding: 5px;
   border-radius: 20px 0 0 20px;
   border:none;
-  background-color: #0F053C;
-  opacity: 0.5;
+  background-color: #ADA5CF;
+  color: white;
+  font-weight: bolder;
 }
 ::placeholder{
   color:grey;
@@ -190,5 +192,19 @@ input:focus {
 .btn-del{
   border:none;
   background-color: transparent;
+  float: right;
+  bottom: 50px;
+  cursor: pointer;
 }
+
+.btn-edt{
+  border:none;
+  background-color: transparent;
+  float: right;
+  bottom: 50px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/*checkbox*/
 

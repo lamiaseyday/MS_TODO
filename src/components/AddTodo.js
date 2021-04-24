@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {FaPlus} from "react-icons/fa";
 
-export class AddTodo extends Component {
+class AddTodo extends Component {
     state = {
         title: ''
     }
@@ -31,7 +31,7 @@ export class AddTodo extends Component {
                     value={this.state.title}
                     onChange={this.onChange}
                 />
-                <button className="btn"><FaPlus /></button>
+                <button className="btn"><FaPlus size="25" /></button>
             </form>
         )
     }

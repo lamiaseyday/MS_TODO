@@ -12,6 +12,7 @@ import {BiSearch} from "react-icons/bi";
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
 import "./App.css";
+import EditTodo from "./components/EditTodo";
 
 class App extends Component {
 
@@ -66,6 +67,10 @@ class App extends Component {
       })
     );
   };
+
+  edtTodo = async (id, newTitle) => {
+    console.log("Edit");
+  }
   //Api'ye yeni veri ekleme post etme işlemi
   addTodo = async (newTodoStr) => {
     const newTodo = { title: newTodoStr, completed: false };
@@ -94,11 +99,11 @@ class App extends Component {
       <Router>
         <div className="app">
           <div className="menu-content">
-          <div className="btn-content-todo"> <button className="btn-todo btn-group"><RiCalendarTodoLine className="iconStyle" /></button></div><br/> 
-           <div className="btn-content-fav"><button className="btn-favorite btn-group"><AiOutlineStar className="iconStyle"/></button></div><br/> 
-           <div className="btn-content-date"><button className="btn-date btn-group"><CgCalendarDates className="iconStyle"/></button></div><br/> 
-           <div className="btn-content-person"><button className="btn-person btn-group"><BsFillPersonFill className="iconStyle"/></button></div><br/> 
-           <div className="btn-content-home"><button className="btn-home btn-group"><AiFillHome className="iconStyle"/></button></div>
+          <div className="btn-content-todo"> <a title="Todo" href="/" className="btn-todo btn-group"><RiCalendarTodoLine className="iconStyle" /></a></div><br/> 
+           <div className="btn-content-fav"><a title="Favorites" href="/fav" className="btn-favorite btn-group"><AiOutlineStar className="iconStyle"/></a></div><br/> 
+           <div className="btn-content-date"><a title="Date" href="/date" className="btn-date btn-group"><CgCalendarDates className="iconStyle"/></a></div><br/> 
+           <div className="btn-content-person"><a title="Profile" href="/person" className="btn-person btn-group"><BsFillPersonFill className="iconStyle"/></a></div><br/> 
+           <div className="btn-content-home"><a title="Home" href="/home" className="btn-home btn-group"><AiFillHome className="iconStyle"/></a></div>
           </div>
           <div className="content">
             <div className="search">
@@ -116,6 +121,7 @@ class App extends Component {
                       todos={this.state.todos}
                       markComplete={this.markComplete}
                       delTodo={this.delTodo}
+                      edtTodo={this.edtTodo}
                     />
                   </React.Fragment>
                 )}
